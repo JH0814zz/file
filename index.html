@@ -20,9 +20,9 @@
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(data, 'text/html');
 
-                // 페이지 텍스트에서 "예약: 숫자명" 패턴 찾기
+                // 페이지 텍스트에서 "예약 :  숫자석" 패턴 찾기
                 const bodyText = doc.body.innerText;
-                const reservationPattern = /예약:\s*\d+석/;  // "예약: 숫자명" 형식 추출
+                const reservationPattern = /예약 :  \d+석/;  // "예약 :  숫자석" 형식 추출
                 const reservationMatch = bodyText.match(reservationPattern);
 
                 // 결과 표시
